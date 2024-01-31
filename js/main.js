@@ -50,12 +50,29 @@ const app = createApp({
           type: false,
         },
       ],
+
+      newTask: {
+        name: "",
+        type: false,
+      },
     };
   },
 
   methods: {
     removeTask(i) {
       this.tasks.splice(i, 1);
+    },
+
+    pushNewTask() {
+      const newObject = { ...this.newTask };
+
+      if (newObject.name.length < 1) {
+        alert("Il valore inserito non é corretto. Ritenta");
+        return;
+      }
+
+      this.tasks.push(newObject);
+      this.newTask.name = "";
     },
   },
 });

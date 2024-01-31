@@ -33,12 +33,26 @@
   </head>
   <body>
     <div id="root">
-      <div class="container text-center mt-2">
+      <div class="container text-center mt-2 d-flex flex-column">
         <h1 class="mb-3">{{ title }}</h1>
+        <h2 class="m2-3">Aggiungi un nuovo task</h2>
+
+        <input
+          v-model.trim="newTask.name"
+          class="form-control my-4"
+          type="text"
+          placeholder="Inserisci il nuovo task..."
+          aria-label="default input example"
+        />
+
+        <button @click="pushNewTask()" class="btn btn-success mb-4 text-start">
+          Inserisci
+        </button>
+
         <div class="row">
           <div class="col-12">
-            <h2 class="mb-3">Lista Task</h2>
-            <ul>
+            <h3 class="mb-3">Lista Task</h3>
+            <ul class="p-0">
               <li
                 v-for="(task, index) in tasks"
                 :class="(task.type) ? 'done' : ''"
