@@ -39,6 +39,7 @@
 
         <input
           v-model.trim="newTask.name"
+          @keyUp.enter="pushNewTask()"
           class="form-control my-4"
           type="text"
           placeholder="Inserisci il nuovo task..."
