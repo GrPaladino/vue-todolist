@@ -74,6 +74,10 @@ const app = createApp({
       this.tasks.push(newObject);
       this.newTask.name = "";
     },
+
+    setTypeStatus(task) {
+      task.type = !task.type;
+    },
   },
 });
 app.mount("#root");

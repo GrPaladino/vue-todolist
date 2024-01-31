@@ -58,7 +58,7 @@
                 v-for="(task, index) in tasks"
                 :class="(task.type) ? 'done' : ''"
               >
-                {{task.name}}
+                <p @click="setTypeStatus(task)">{{task.name}}</p>
                 <span>
                   <i
                     @click="removeTask(index)"

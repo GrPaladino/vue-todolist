@@ -12,7 +12,8 @@ li.done {
   text-decoration-line: line-through;
 }
 
-li i {
+li i,
+li p {
   cursor: pointer;
 }
 
