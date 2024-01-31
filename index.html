@@ -32,9 +32,12 @@
           <div class="col-12">
             <h2 class="mb-3">Lista Task</h2>
             <ul>
-              <li>Task1</li>
-              <li>Task1</li>
-              <li>Task1</li>
+              <li
+                v-for="(task, index) in tasks"
+                :class="(task.type) ? 'done' : ''"
+              >
+                {{task.name}}
+              </li>
             </ul>
           </div>
         </div>
