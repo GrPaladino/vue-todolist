@@ -3,6 +3,8 @@ li {
   margin-top: 1rem;
   list-style: none;
   background-color: yellowgreen;
+  display: flex;
+  justify-content: space-between;
 }
 
 li.done {

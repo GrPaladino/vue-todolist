@@ -53,6 +53,10 @@ const app = createApp({
     };
   },
 
-  methods: {},
+  methods: {
+    removeTask(i) {
+      this.tasks.splice(i, 1);
+    },
+  },
 });
 app.mount("#root");
